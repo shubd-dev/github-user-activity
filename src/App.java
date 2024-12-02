@@ -113,7 +113,7 @@ public class App {
                 System.out.println("Unhandled event type: " + type);
             }
             
-            //generate else if for every event type
+            //generate else if for every event typ
         }
 
     }
