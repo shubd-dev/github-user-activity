@@ -1,0 +1,11 @@
+*.iml
+.idea/
+.vscode/
+
+# Ignore build files
+bin/
+*.class
+
+# Ignore system files
+.DS_Store
+Thumbs.db
