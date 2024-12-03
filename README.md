@@ -19,7 +19,7 @@ This application is part of the [roadmap.sh](https://roadmap.sh/projects/github-
 ## How to Use
 1. **Clone the Repository**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/shubd-dev/github-user-activity.git
    cd github-user-activity
    ```
 
@@ -40,14 +40,8 @@ This application is part of the [roadmap.sh](https://roadmap.sh/projects/github-
 ---
 
 ## Requirements
-- Java Development Kit (JDK) 8 or higher.
+- Java Development Kit (JDK) 11 or higher.
 - JSON-simple library (already included in the `lib` folder).
-- Internet connection to access GitHub API.
-
----
-
-## Roadmap.sh Reference
-This project follows the backend developer roadmap guidelines outlined at [roadmap.sh](https://roadmap.sh/projects/github-user-activity).
 
 ---
 
@@ -56,10 +50,6 @@ This project follows the backend developer roadmap guidelines outlined at [roadm
 Enter GitHub username: octocat
 Fetching data...
 GitHub User: octocat
-Public Repos: 10
-Followers: 150
-Following: 2
-Last Updated: 2024-12-01
 ```
 
 ---
@@ -76,6 +66,6 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 ## Acknowledgments
 - [JSON-simple](https://code.google.com/archive/p/json-simple/) for JSON parsing.
-- [GitHub API](https://docs.github.com/en/rest) for user data retrieval.
+- [GitHub API](https://docs.github.com/en/rest/using-the-rest-api/github-event-types?apiVersion=2022-11-28) for user data retrieval.
 - [roadmap.sh](https://roadmap.sh) for the backend developer roadmap.
 ```

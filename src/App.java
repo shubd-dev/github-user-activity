@@ -22,6 +22,8 @@ public class App {
         HttpResponse<String> response = null;
 
         try {
+            System.out.println("Fetching data...");
+            System.out.println("GitHub User: "+ userName);
             response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
         } catch (IOException e) {
             e.printStackTrace();
