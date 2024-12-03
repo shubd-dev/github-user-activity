@@ -1,6 +1,3 @@
-Here’s a sample `README.md` file for your project:  
-
-```markdown
 # GitHub User Activity
 
 A Java application for analyzing GitHub user activity. This project uses the [JSON-simple](https://code.google.com/archive/p/json-simple/) library to parse JSON data retrieved from GitHub's API.
@@ -82,8 +79,3 @@ This project is open-source and available under the [MIT License](LICENSE).
 - [GitHub API](https://docs.github.com/en/rest) for user data retrieval.
 - [roadmap.sh](https://roadmap.sh) for the backend developer roadmap.
 ```
-
-### **How to Use This:**
-- Save this as a `README.md` file in your project directory.
-- Replace `<repository-url>` with the actual URL of your GitHub repository.  
-Let me know if you'd like further tweaks! 🚀
