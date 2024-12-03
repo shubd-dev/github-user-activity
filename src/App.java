@@ -4,13 +4,13 @@ import java.util.Scanner;
 import java.io.IOException;
 import org.json.*;
 
-import netscape.javascript.JSObject;
 
 public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the user name of the github user: ");
         String userName = sc.next();
-        System.out.println("user name of user is " + userName);
+        //System.out.println("user name of user is " + userName);
         sc.close();
 
         // Http request message builder
@@ -69,11 +69,12 @@ public class App {
                 String action = payload.getString("action");
                 output = "A pull request Activity is "+action+" at "+repoName;
                 System.out.println(output);
-
             }
             else if (type.equals("PullRequestReviewEvent")) {
                 // Handle pull request review events
-                
+                String action = payload.getString("action");
+                output = "A pull request review Activity is "+action+" at "+repoName;
+                System.out.println(output);
             }
             else if (type.equals("IssuesEvent")) {
                 // Handle issues events (opened, closed, etc.)
@@ -82,18 +83,30 @@ public class App {
             }
             else if (type.equals("IssueCommentEvent")) {
                 // Handle comments on issues
+                String action = payload.getString("action");
+                output = "An issue comment is "+action+" at "+repoName;
             }
             else if (type.equals("ForkEvent")) {
                 // Handle repository fork events
+                String repo_name = payload.getJSONObject("forkee").getString("repo.name");
+                output = "A repository is forked at "+repoName+" with repo-name:" + repo_name ;
+                System.out.println(output);
             }
             else if (type.equals("WatchEvent")) {
                 // Handle repository starring events
+                output = "A repository is starred at "+repoName;
+                System.out.println(output);
             }
             else if (type.equals("ReleaseEvent")) {
                 // Handle release events
+                String action = payload.getString("action");
+                output = "A release is "+action+" at "+repoName;
+                System.out.println(output);
             }
             else if (type.equals("CommitCommentEvent")) {
                 // Handle commit comment events
+                output = "A commit comment is created at "+repoName;
+                System.out.println(output);
             }
             else if (type.equals("GollumEvent")) {
                 // Handle wiki page events
@@ -102,19 +115,18 @@ public class App {
             }
             else if (type.equals("MemberEvent")) {
                 // Handle repository collaborator events
-                output = "A collaborator is added or removed";
-                System.out.println();
+                output = "A repository collaborator is added or removed";
+                System.out.println(output);
             }
             else if (type.equals("PublicEvent")) {
                 // Handle when repository becomes public
+                output = "A repository is made public";
+                System.out.println(output);
             }
             else {
                 // Handle any other events
                 System.out.println("Unhandled event type: " + type);
             }
-            
-            //generate else if for every event typ
         }
-
     }
 };

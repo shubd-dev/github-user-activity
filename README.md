@@ -1,18 +1,89 @@
-## Getting Started
+Here’s a sample `README.md` file for your project:  
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+```markdown
+# GitHub User Activity
 
-## Folder Structure
+A Java application for analyzing GitHub user activity. This project uses the [JSON-simple](https://code.google.com/archive/p/json-simple/) library to parse JSON data retrieved from GitHub's API.
 
-The workspace contains two folders by default, where:
+---
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Project Overview
+This application is part of the [roadmap.sh](https://roadmap.sh/projects/github-user-activity) backend roadmap project. It demonstrates how to fetch and process GitHub user data.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+---
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Features
+- Fetches GitHub user data using the GitHub API.
+- Parses JSON responses with the `JSON-simple` library.
+- Provides user-friendly output summarizing GitHub activity.
 
-## Dependency Management
+---
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## How to Use
+1. **Clone the Repository**:
+   ```bash
+   git clone <repository-url>
+   cd github-user-activity
+   ```
+
+2. **Run the Application**:
+   - Compile the source code:
+     ```bash
+     javac -cp lib/json-simple.jar src/*.java
+     ```
+   - Execute the program:
+     ```bash
+     java -cp lib/json-simple.jar:src Main
+     ```
+
+3. **Provide a GitHub Username**:
+   - Enter a GitHub username when prompted.
+   - View the summarized GitHub activity in the output.
+
+---
+
+## Requirements
+- Java Development Kit (JDK) 8 or higher.
+- JSON-simple library (already included in the `lib` folder).
+- Internet connection to access GitHub API.
+
+---
+
+## Roadmap.sh Reference
+This project follows the backend developer roadmap guidelines outlined at [roadmap.sh](https://roadmap.sh/projects/github-user-activity).
+
+---
+
+## Example
+```plaintext
+Enter GitHub username: octocat
+Fetching data...
+GitHub User: octocat
+Public Repos: 10
+Followers: 150
+Following: 2
+Last Updated: 2024-12-01
+```
+
+---
+
+## Contributing
+Feel free to fork this repository, submit pull requests, or raise issues for suggestions and improvements.
+
+---
+
+## License
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+## Acknowledgments
+- [JSON-simple](https://code.google.com/archive/p/json-simple/) for JSON parsing.
+- [GitHub API](https://docs.github.com/en/rest) for user data retrieval.
+- [roadmap.sh](https://roadmap.sh) for the backend developer roadmap.
+```
+
+### **How to Use This:**
+- Save this as a `README.md` file in your project directory.
+- Replace `<repository-url>` with the actual URL of your GitHub repository.  
+Let me know if you'd like further tweaks! 🚀
